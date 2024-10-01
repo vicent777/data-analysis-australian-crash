@@ -38,5 +38,10 @@ Os seguintes modelos foram aplicados para classificar o **Tipo de Acidente(crash
 - **Decision Tree**: Modelo que utiliza uma estrutura de árvore para representar decisões e suas possíveis consequências, valorizado por sua interpretabilidade.
 - **Random Forest**: Conjunto de árvores de decisão combinadas para melhorar a precisão das previsões, reduzindo o viés e a variância do modelo.
 
+## 6. Considerações finais
 
+- Por fim, pode-se verificar que a função score() do modelo RandomForestClassifier calcula a proporção de previsões corretas em relação ao total de amostras no conjunto de teste (X_test, y_test). Isso significa que o modelo foi capaz de classificar corretamente aproximadamente 73% dos casos no conjunto de dados de teste.
 
+- Também é possível notar que ao retirar as colunas com menor correlação, apenas pioramos a acurácia. Possivelmente isso se traduz pelo longo período, gerando mais ruídos nos dados. É possível que a acurácia fosse mais precisa se o tempo analisado fosse menor. Isso porque podem ter ocorrido mudanças significativas em leis de trânsito, infraestrutura rodoviária, tipos de veículos e comportamento dos motoristas, além de avanços na tecnologia automotiva. Isso pode introduzir variabilidade nos dados, dificultando a detecção de padrões consistentes pelo modelo. Usar um período mais recente pode refletir melhor as condições atuais e criar um modelo mais preciso.
+
+- Por outro lado, também é possível que, ao reduzir o período, o tamanho da base de dados diminua significativamente, o que poderia afetar o treinamento do modelo, já que teria menos dados para aprender. Portanto, uma análise exploratória seria recomendada para verificar se a correlação das variáveis com o target melhora ao limitar o período, e se o volume de dados ainda é suficiente para treinar modelos robustos.
